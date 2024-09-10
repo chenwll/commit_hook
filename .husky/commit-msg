@@ -1,0 +1,5 @@
+# .git/hooks/commit-msg
+
+msg=$(cat $1)
+echo $msg
+git log -n 10 --pretty=format:"%h - %an, %ar : %s"
